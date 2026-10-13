@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e71932">
+  <title>LifeSaver | Donate Blood, Save Lives</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">♥</span>
+      <span>Life<span class="red">Saver</span>
+        <small>DONATE BLOOD · SAVE LIVES</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#register">Become a Donor</a>
+      <a href="#find">Find Donors</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="nav-cta" href="#register">Donate Blood ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">♥ EVERY DONATION COUNTS</div>
+        <h1>Your blood can<br><em>save a life.</em></h1>
+        <p>
+          One small act of kindness can give someone another
+          chance at life. Become a donor and help your community
+          when it matters most.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#register">♥ Become a donor</a>
+          <a class="btn btn-light" href="#find">Find blood donors →</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="avatars">
+            <span>R</span><span>P</span><span>A</span><span>+</span>
+          </div>
+          <div>
+            <strong>Be someone's hero</strong>
+            <small>Join a community of lifesavers</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="halo"></div>
+        <div class="heart">♥</div>
+        <div class="drop">✚</div>
+        <div class="art-caption">GIVE BLOOD<br><strong>GIVE HOPE.</strong></div>
+        <span class="float float-one">✦</span>
+        <span class="float float-two">♥</span>
+      </div>
+
+      <div class="hero-bottom">
+        <span>01 / 04</span>
+        <span class="hero-line"></span>
+        <span>Small act. Big impact.</span>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="stat">
+        <span class="stat-icon">♥</span>
+        <div><strong id="donorCount">0</strong><small>Registered donors</small></div>
+      </article>
+      <article class="stat">
+        <span class="stat-icon">✚</span>
+        <div><strong>8</strong><small>Blood groups covered</small></div>
+      </article>
+      <article class="stat">
+        <span class="stat-icon">♡</span>
+        <div><strong>Save lives</strong><small>Every donation matters</small></div>
+      </article>
+      <article class="stat">
+        <span class="stat-icon">⌖</span>
+        <div><strong>Near you</strong><small>Search by city</small></div>
+      </article>
+    </section>
+
+    <section class="section" id="find">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">FIND YOUR MATCH</div>
+          <h2>Find a blood donor</h2>
+          <p>Search registered donors by blood group and city.</p>
+        </div>
+        <span class="section-symbol">⌕</span>
+      </div>
+
+      <form id="searchForm" class="search-panel">
+        <label>
+          Blood group
+          <select id="searchGroup">
+            <option value="">All blood groups</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+          </select>
+        </label>
+
+        <label>
+          City / Location
+          <input id="searchCity" placeholder="e.g. Lucknow" maxlength="80">
+        </label>
+
+        <button class="btn btn-primary" type="submit">⌕ Search donors</button>
+      </form>
+
+      <div id="searchMessage" class="message" role="status"></div>
+      <div id="donorResults" class="donor-grid">
+        <div class="empty-state">Search for donors to see matching results.</div>
+      </div>
+
+      <p class="privacy-note">
+        Donor details are limited for privacy. Always confirm availability
+        and medical eligibility with an authorized blood centre.
+      </p>
+    </section>
+
+    <section class="section register-section" id="register">
+      <div class="register-intro">
+        <div class="eyebrow">MAKE A DIFFERENCE</div>
+        <h2>Be the reason<br>someone smiles.</h2>
+        <p>
+          Register as a volunteer donor. Your willingness to help
+          can make a real difference in an emergency.
+        </p>
+
+        <div class="benefit">
+          <span>✓</span>
+          <div><strong>Quick registration</strong><small>Share your basic details.</small></div>
+        </div>
+        <div class="benefit">
+          <span>✓</span>
+          <div><strong>Help people nearby</strong><small>Find local registered donors.</small></div>
+        </div>
+        <div class="benefit">
+          <span>✓</span>
+          <div><strong>Your choice matters</strong><small>Consent before contact.</small></div>
+        </div>
+      </div>
+
+      <form id="donorForm" class="form-card">
+        <div class="form-title">
+          <span class="form-heart">♥</span>
+          <div>
+            <h3>Donor registration</h3>
+            <p>Fields marked * are required</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <label class="full">
+            Full name *
+            <input name="name" required minlength="2" maxlength="80"
+              placeholder="Enter your full name" autocomplete="name">
+          </label>
+
+          <label>
+            Phone number *
+            <input name="phone" required inputmode="tel"
+              pattern="[0-9+() -]{10,18}" maxlength="18"
+              placeholder="9876543210" autocomplete="tel">
+          </label>
+
+          <label>
+            Blood group *
+            <select name="bloodGroup" required>
+              <option value="">Select group</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </label>
+
+          <label class="full">
+            City / Location *
+            <input name="city" required minlength="2" maxlength="80"
+              placeholder="Enter your city" autocomplete="address-level2">
+          </label>
+
+          <label class="full">
+            Email (optional)
+            <input name="email" type="email" maxlength="120"
+              placeholder="you@example.com" autocomplete="email">
+          </label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          I agree to be contacted about blood donation requests.
+          Registration does not guarantee medical eligibility.
+        </label>
+
+        <button class="btn btn-primary submit-btn" id="registerButton" type="submit">
+          Register as a donor <span>→</span>
+        </button>
+
+        <div id="formMessage" class="message" role="status"></div>
+        <p class="form-foot">
+          Learning demo: do not enter real personal information on a
+          publicly deployed test website.
+        </p>
+      </form>
+    </section>
+
+    <section class="about-strip" id="about">
+      <div class="about-icon">♥</div>
+      <div>
+        <div class="eyebrow">WHY DONATE?</div>
+        <h2>A little of you can mean the world to someone.</h2>
+        <p>
+          Blood donation supports patients during emergencies, surgeries
+          and medical treatment. Eligibility must be confirmed by a
+          qualified blood centre.
+        </p>
+      </div>
+      <a class="btn btn-light" href="#register">Join the mission ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">♥</span>
+      <span>Life<span class="red">Saver</span><small>DONATE BLOOD · SAVE LIVES</small></span>
+    </a>
+    <p>Made with ♥ to encourage lifesaving kindness.</p>
+    <div><a href="#about">About</a><a href="#register">Register</a><a href="#find">Find donors</a></div>
+    <small class="disclaimer">
+      Demo project · Not an official blood bank or medical service.
+    </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
